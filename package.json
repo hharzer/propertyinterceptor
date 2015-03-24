@@ -1,0 +1,30 @@
+{
+  "name": "PropertyInterceptor JS",
+  "version":"0.0.90",
+  "description": "A simple, standardized means of creating reliable chained before and after methods on Javascript object properties for validation, security, functional reactive programming, and more.",
+  "main": "PropertyInterceptor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anywhichway/propertyinterceptor.git"
+  },
+  "keywords": [
+    "defineProperty",
+    "getOwnPropertyDescriptor",
+    "reactive",
+    "security",
+    "validation",
+    "node"
+  ],
+  "author": "Simon Y. Blackwell <syblackwell@anywhichway.com> (http://www.github.com/anywhichway)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anywhichway/propertyinterceptor/issues"
+  },
+  "dependencies": {
+   
+  },
+  "homepage": "https://github.com/anywhichway/propertyinterceptor"
+}
