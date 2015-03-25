@@ -1,0 +1,36 @@
+<html>
+<script src="../PropertyInterceptor.min.js"></script>
+<body>
+<script>
+function Person() {
+	this.name = "Bill";
+}
+var person = new Person();
+document.write(person.name + "<br>");
+
+/*
+NOTE: This code uses var desc = Object.getOwnPropertyDescriptor(object,property); to
+avoid recursive calls to object[property] which would cause double calls to the trace
+routines inside the interceptors
+*/
+
+Object.intercept.afterGet(person,"name",function(object,property,value) {
+	var desc = Object.getOwnPropertyDescriptor(object,property);
+	document.write("beforeGet name " + desc.get.value + " " + value + "<br>");
+	return value.toUpperCase();
+});
+Object.intercept.beforeSet(person,"name",function(object,property,value) {
+	var desc = Object.getOwnPropertyDescriptor(object,property);
+	document.write("beforeSet name " + desc.get.value + " " + value  + "<br>");
+	return value.toLowerCase();
+});
+Object.intercept.afterSet(person,"name",function(object,property,value) {
+	var desc = Object.getOwnPropertyDescriptor(object,property);
+	document.write("afterSet name "  + desc.get.value + " " + value  + "<br>");
+	return value;
+});
+person.name = "Mary";
+document.write(person.name  + "<br>");
+</script>
+</body>
+</html>

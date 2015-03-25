@@ -1,5 +1,6 @@
 (function(exports) {
-	
+	//Copyright 2015, Simon Y. Blackwell
+	//Distributed under the MIT License
 	/*
 	 * An increasing number of advanced Javascript developers make use of Object.getOwnPropertyDescriptor and Object.defineProperty. These methods can be tricky to use correctly
 	 * and often result in a lot of repeated code patterns for redefining properties. This PropertyInterceptor abstracts out this capability.
@@ -171,6 +172,7 @@
 		return object;
 	}
 	// patch the global Object
+	exports.Object = Object;
 	exports.Object.intercept = {
 			afterGet: PropertyInterceptor.prototype.afterGet,
 			beforeSet: PropertyInterceptor.prototype.beforeSet,

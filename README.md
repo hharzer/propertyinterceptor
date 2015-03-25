@@ -13,7 +13,9 @@ Feel free to fork and send us pull requests. We would like to make this better f
 
 # updates
 
-2015-03-24 Initial public commit v0.0.9 
+2015-03-24 Initial public commit v0.0.90
+
+2015-03-25 v0.0.91 NPM package published, min file added with tests 
 
 # license
 
