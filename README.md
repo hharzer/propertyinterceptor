@@ -5,6 +5,10 @@ For documentation see the Wiki: https://github.com/anywhichway/propertyintercept
 
 For questions, bugs, enhancement requests use: https://github.com/anywhichway/propertyinterceptor/issues
 
+npm install propertyinterceptor
+
+also works in a browser
+
 Currently planned sprints are:
 
 [2015 April](https://github.com/anywhichway/propertyinterceptor/issues?q=is%3Aopen+is%3Aissue+milestone%3A%222015+April+Sprint%22) - Completed Early
