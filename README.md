@@ -7,7 +7,7 @@ For questions, bugs, enhancement requests use: https://github.com/anywhichway/pr
 
 Currently planned sprints are:
 
-[2015 April](https://github.com/anywhichway/propertyinterceptor/issues?q=is%3Aopen+is%3Aissue+milestone%3A%222015+April+Sprint%22)
+[2015 April](https://github.com/anywhichway/propertyinterceptor/issues?q=is%3Aopen+is%3Aissue+milestone%3A%222015+April+Sprint%22) - Completed Early
 
 Feel free to fork and send us pull requests. We would like to make this better for everyone.
 
