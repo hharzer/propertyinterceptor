@@ -1,5 +1,5 @@
 # propertyinterceptor
-A simple, standardized means of creating reliable chained before and after methods on Javascript object properties for validation, security, functional reactive programming, and more.
+A simple, standardized means of creating reliable chained before and after methods on JavaScript object properties for validation, security, functional reactive programming, and more.
 
 For documentation see the Wiki: https://github.com/anywhichway/propertyinterceptor/wiki
 
