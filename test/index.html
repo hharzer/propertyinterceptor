@@ -6,7 +6,7 @@ function Person() {
 	this.name = "Bill";
 }
 var person = new Person();
-document.write(person.name + "<br>");
+document.body.innerHTML += person.name + "<br>";
 
 /*
 NOTE: This code uses var desc = Object.getOwnPropertyDescriptor(object,property); to
@@ -16,21 +16,21 @@ routines inside the interceptors
 
 Object.intercept.afterGet(person,"name",function(object,property,value) {
 	var desc = Object.getOwnPropertyDescriptor(object,property);
-	document.write("beforeGet name " + desc.get.value + " " + value + "<br>");
+	document.body.innerHTML += "beforeGet name " + desc.get.value + " " + value + "<br>";
 	return value.toUpperCase();
 });
 Object.intercept.beforeSet(person,"name",function(object,property,value) {
 	var desc = Object.getOwnPropertyDescriptor(object,property);
-	document.write("beforeSet name " + desc.get.value + " " + value  + "<br>");
+	document.body.innerHTML += "beforeSet name " + desc.get.value + " " + value  + "<br>";
 	return value.toLowerCase();
 });
 Object.intercept.afterSet(person,"name",function(object,property,value) {
 	var desc = Object.getOwnPropertyDescriptor(object,property);
-	document.write("afterSet name "  + desc.get.value + " " + value  + "<br>");
+	document.body.innerHTML += "afterSet name "  + desc.get.value + " " + value  + "<br>";
 	return value;
 });
 person.name = "Mary";
-document.write(person.name  + "<br>");
+document.body.innerHTML += person.name  + "<br>";
 </script>
 </body>
 </html>
