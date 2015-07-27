@@ -43,7 +43,8 @@
 			value = after(value);
 		});
 		// store the final value and return to the caller
-		return descriptor.get.value = value;
+		descriptor.get.value = value;
+		return value;
 	}
 	
 	function set(descriptor,value) {
@@ -70,7 +71,7 @@
 	 */
 	PropertyInterceptor.prototype.afterGet = function(object,property,callback) {
 		var descriptor = Object.getOwnPropertyDescriptor(object,property);
-		descriptor || (descriptor = {configurable:true,enumerable:true});
+		descriptor = (descriptor ? descriptor : {configurable:true,enumerable:true});
 		var value = (descriptor.get ? descriptor.get() : descriptor.value);
 		var handler = function(value) { return handler.callback(object,property,value); };
 		handler.callback = callback; // create the handler that actually gets called, saving callback in a location we can get it later to uninstall intercept
@@ -102,7 +103,7 @@
 	 */
 	PropertyInterceptor.prototype.beforeSet = function(object,property,callback) {
 		var descriptor = Object.getOwnPropertyDescriptor(object,property);
-		descriptor || (descriptor = {configurable:true,enumerable:true});
+		descriptor = (descriptor ? descriptor : {configurable:true,enumerable:true});
 		var value = (descriptor.get ? descriptor.get() : descriptor.value);
 		if(typeof(value)==="function") {
 			return false;
@@ -138,7 +139,7 @@
 	}
 	PropertyInterceptor.prototype.afterSet = function(object,property,callback) {
 		var descriptor = Object.getOwnPropertyDescriptor(object,property);
-		descriptor || (descriptor = {configurable:true,enumerable:true});
+		descriptor = (descriptor ? descriptor : {configurable:true,enumerable:true});
 		var value = (descriptor.get ? descriptor.get() : descriptor.value);
 		if(typeof(value)==="function") {
 			return false;
@@ -180,4 +181,4 @@
 	}
 	exports.PropertyInterceptor = PropertyInterceptor;
 	return exports.PropertyInterceptor
-})("undefined"!=typeof exports&&"undefined"!=typeof global?global:window);
+})("undefined"!==typeof exports&&"undefined"!==typeof global?global:window);

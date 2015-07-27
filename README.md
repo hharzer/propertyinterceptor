@@ -15,13 +15,19 @@ Currently planned sprints are:
 
 Feel free to fork and send us pull requests. We would like to make this better for everyone.
 
+[![Codacy Badge](https://www.codacy.com/project/badge/425fcea5e81b46d39b03a5c2a2398c8d)](https://www.codacy.com/app/app39368497/propertyinterceptor)
+
 # updates
 
-2015-03-24 Initial public commit v0.0.90
+2015-07-26 v0.0.92 Made updates based on Codacy analysis
+
+2015-04-07 Updated tests, version not incremented
 
 2015-03-25 v0.0.91 NPM package published, min file added with tests
 
-2015-04-07 Updated tests, version not incremented
+2015-03-24 Initial public commit v0.0.90
+
+
 
 # license
 

@@ -1,6 +1,6 @@
 {
   "name": "propertyinterceptor",
-  "version":"0.0.91",
+  "version":"0.0.92",
   "description": "A simple, standardized means of creating reliable chained before and after methods on Javascript object properties for validation, security, functional reactive programming, and more.",
   "main": "PropertyInterceptor.js",
   "scripts": {
